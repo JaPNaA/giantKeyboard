@@ -18,7 +18,8 @@ body {
 }
 
 #input {
-    white-space: pre-wrap;
+    text-wrap: nowrap;
+    white-space: pre;
     display: inline-block;
 }
 
