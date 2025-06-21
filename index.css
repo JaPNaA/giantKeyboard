@@ -27,8 +27,10 @@ body {
 .keyboard>div {
     font-size: 30vw;
     background-color: #e7e7e7;
-    margin: 20vw 0;
+    margin: 5vw 0;
     text-align: center;
+    width: 48vw;
+    display: inline-block;
 }
 
 .keyboard>div:active {
@@ -37,5 +39,5 @@ body {
 
 .keyboard>#space,
 .keyboard>#backspace {
-    font-size: 15vw;
+    font-size: 7vw;
 }
