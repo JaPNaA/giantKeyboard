@@ -1,5 +1,9 @@
 /** @type {HTMLInputElement} */ // @ts-ignore
 const input = document.getElementById("input");
+/** @type {HTMLDivElement} */ // @ts-ignore
+const topElm = document.querySelector(".top");
+/** @type {HTMLDivElement} */ // @ts-ignore
+const keyboard = document.querySelector(".keyboard");
 
 let v = "";
 
@@ -8,7 +12,7 @@ document.querySelectorAll(".keyboard > div").forEach(x => {
     x.setAttribute("tabindex", "0");
 });
 
-document.querySelector(".keyboard")?.addEventListener("click", (e) => {
+keyboard.addEventListener("click", (e) => {
     // @ts-ignore
     const key = findParentKey(e.target);
     if (!key) { return; }
@@ -26,12 +30,12 @@ document.querySelector(".keyboard")?.addEventListener("click", (e) => {
 let startTouchY = 0;
 let startTouchX = 0;
 
-document.body.addEventListener("touchstart", (e) => {
+keyboard.addEventListener("touchstart", (e) => {
     startTouchY = e.changedTouches[0].clientY;
     startTouchX = e.changedTouches[0].clientX;
 });
 
-document.body.addEventListener("touchend", (e) => {
+keyboard.addEventListener("touchend", (e) => {
     const changedTouch = e.changedTouches[0];
     if (Math.abs(changedTouch.clientY - startTouchY) < 40) {
         if (
@@ -49,6 +53,7 @@ document.body.addEventListener("touchend", (e) => {
 
 function updateV() {
     input.innerText = v + "|";
+    topElm.scrollLeft = topElm.scrollWidth;
 }
 
 
