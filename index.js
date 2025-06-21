@@ -52,7 +52,7 @@ keyboard.addEventListener("touchend", (e) => {
 });
 
 function updateV() {
-    input.innerText = v + "|";
+    input.innerText = v;
     topElm.scrollLeft = topElm.scrollWidth;
 }
 

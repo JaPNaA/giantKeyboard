@@ -14,11 +14,22 @@ body {
     background-color: #cfcfcf;
     border: 1px solid #4d4d4d;
     overflow-x: scroll;
+    text-wrap: nowrap;
 }
 
 #input {
     white-space: pre-wrap;
-    text-wrap: nowrap;
+    display: inline-block;
+}
+
+.top .cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 1em;
+    margin-left: 1px;
+    margin-top: 2px;
+    margin-bottom: -2px;
+    border-left: 2px solid #0c32ad;
 }
 
 .keyboard {
